@@ -1,0 +1,1323 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta property="og:title" content="𝐀𝐳𝐤𝐚'𝐬 𝐃𝐢𝐠𝐢𝐭𝐚𝐥 𝐑𝐨𝐨𝐦">
+    <meta property="og:description" content="Visit my site for a glimpse into my interests and activities.">
+    <meta property="og:image" content="https://lysander-frost.github.io/azka/forurl.jpg">
+    <meta property="og:url" content="https://lysander-frost.github.io/azka/personalweb">
+    <meta property="og:type" content="website">
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"> 
+  <style>
+  /* Aturan untuk layar desktop */
+@media only screen and (min-width: 768px) {
+  body {
+    margin: 0;
+    font-size: 26px;
+    line-height: 1.6;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+#ul-contact {
+    font-size: 35px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    margin-left: 30px;
+}
+
+#ul-contact {
+    font-size: 35px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+    #li-contact {
+    font-size: 25px;
+    font-weight: bold;
+}
+  section {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+  }
+ #audio-container {
+    min-width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    align-items: center;
+    background: #2d363f;
+    color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 0 0px rgba(30, 144, 255, 0.5);
+ }
+   .social-icons a {
+    font-size: 35px;
+    color: #1c86ee;
+    transition: color 0.3s;
+    background-color: #23272b;
+    border-radius: 18px 0 18px 0;
+    height: auto;
+    padding: 4px 10px;
+    margin-top: 27px;
+    margin-left: 20px;
+}
+   .audio-player {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    width: 84%;
+    margin-left: 30px;
+}
+  header {
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    font-size: 35px;
+    max-width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+ footer {
+    width: 100%;
+    font-size: 20px;
+ }
+   #footer-text {
+      font-size: 20px;
+      width: 100%
+   }
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 0 15px;
+    font-size: 18px;
+    color: #333;
+  }
+   .digital-clock {
+    font-weight: Bold;
+    font-size: 42px;
+    background: linear-gradient(25deg, #ff3385, #00e6ff);
+      color: linear-gradient(25deg, #ff3385, #00e6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   margin-top: -20px;
+}
+   #portal {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #29323b;
+    color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 0 0px rgba(30, 144, 255, 0.5);
+}
+   #portal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 30px;
+    min-width: 85%;
+}
+}
+    /* Tambahkan gaya CSS untuk melebarkan textarea */
+    textarea {
+       /* Lebarkan textarea hingga 100% dari lebar container */
+      min-height: 100px; /* Tinggi minimum textarea */
+    }
+   body {
+    align-items: center;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px; /* Sesuaikan dengan tinggi header */
+    line-height: 1.6;
+    background-color: #272c36;
+    color: linear-gradient(50deg, #ff0000, #00ff00, #0000ff);
+   }  /* Untuk perangkat dengan lebar maksimal 600px (mobile) */
+    /* Style untuk tombol bulat di pojok kanan bawah */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    border: 0px solid #fff;
+    border-radius: 50%;
+    background-color: #222; /* Warna background */
+    color: white;
+    text-align: center;
+    display: none; /* Tidak tampil secara default */
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 0px 10px rgba(30, 144, 255, 0.9);
+    transition: opacity 0.3s ease;
+    animation: fadeIn 0.3s forwards;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Saat tombol terlihat, tambahkan opacity */
+#scrollToTopBtn.show {
+    display: block;
+    opacity: 1;
+}
+.digital-clock {
+    font-weight: Bold;
+    font-size: 32px;
+    color: #fff;
+    background: linear-gradient(25deg, #ff3385, #00e6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   margin-top: -20px;
+}
+
+header {
+    background: transpatent;
+    color: linear-gradient(45deg, #ff0000, #ff2222, #0000ff);
+    padding: 0px 0;
+    text-align: center;
+    animation: fadeInDown 2s;
+    position: sticky /* Tambahkan ini */
+    top: 0; /* Posisi di bagian atas */
+    left: 0; /* Posisi di sisi kiri */
+    width: 100%; /* Lebar penuh */
+    z-index: 1000; /* Menjaga agar tetap di atas elemen lain */
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease-in-out 1s;
+    animation-fill-mode: both;
+}
+
+h1 {
+    margin: 5px;
+    font-family: "Bree Serif", serif;
+}
+
+section {
+    padding: 40px;
+    margin: 0px auto;
+    background-color: #29323c;
+    color: #fff;
+    border-radius: 0px;
+    border: 0px solid #ff8200;
+    max-width: auto;
+    box-sizing: border-box;
+}
+
+#profile {
+    background-color: #555; /* Warna background khusus untuk profile */
+}
+
+#skills {
+    background-color: #1e282f; /* Warna background untuk skills */
+    border-height: 2px solid #1c86ee;
+    font-family: 'Lexend Deca';
+   font-size: 16px;
+   -webkit-touch-callout: none; /* Untuk perangkat iOS */
+        -webkit-user-select: none; /* Nonaktifkan pemilihan teks */
+        -moz-user-select: none; /* Nonaktifkan pemilihan teks */
+        -ms-user-select: none; /* Nonaktifkan pemilihan teks */
+        user-select: none; 
+}
+
+#albums {
+    background-color: #29323b;
+    padding: 20px; /* Warna background untuk albums */
+    height: auto;
+    margin-top: 0px;
+}
+
+#comments {
+    background-color: #1c1f24; /* Warna background untuk comments */
+}
+
+#contact {
+    background-color: #222; /* Warna background untuk contact */
+}
+
+h2 {
+    margin-top: 5px;
+    color: #fff;
+    text-align: left;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery img {
+    width: calc(290px - 10px);
+    height: auto;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
+    transition: transform 0.3s ease-in-out;
+    animation: opacity 0.8s ease-out, transform 0.8s ease-out;
+   -webkit-user-drag: none;
+    pointer-events: none;
+}
+
+#per-foto:hover {
+    transform: scale(1.08);
+    transition: transform 0.8s ease;
+}
+
+.comment {
+    background: #25282c;
+    padding: 50px 20px;
+    margin-bottom: 10px;
+    border-radius: 0px;
+    color: green;
+    border: 0px solid #1c86ee;
+    font-weigth: Typewriter;
+}
+
+section#contact {
+   text-align: left;
+    padding: 20px;
+    background-color: #2c3338;
+    border-radius: 10px;
+    color: #d1d1d1;
+}
+
+#h2-contact {
+    padding: 35px 10px;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+#span-contact {
+    color: #1e90ff;
+}
+
+#ul-contact {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#ul-contact {
+    font-size: 18px;
+    font-weight: bold;
+}
+    #li-contact {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#p-isi {
+    margin: 0px 0 20px;
+    font-ai
+}
+
+.social-icons {
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+   margin-top: 0;
+}
+
+.social-icons a {
+    font-size: 18px;
+    color: #1c86ee;
+    transition: color 0.3s;
+    background-color: #23272b;
+    border-radius: 18px 0 18px 0;
+    height: auto;
+    padding: 4px 10px;
+    margin-top: 27px;
+    margin-left: 10px;
+}
+
+.social-icons :hover {
+    box-shadow: 0 0 10px rgba(30, 144, 255, 0.9);
+}
+
+#p {
+    font-size: 16px;
+    margin-top: 25px;
+    color: #d1d1d1;
+    margin-left: 0px;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 0;
+    margin-top: -30px;
+    height: auto;
+}
+
+/* Animasi Fade-in untuk Header */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gaya untuk Foto Profil dengan Efek Glow */
+#profile-pic {
+    text-align: center;
+  font-family: 'Nerko One', cursive;
+    max-width: auto;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    height: auto;
+}
+.profile-photo {
+    width: 170px;
+    height: 170px;  
+    border-radius: 50%;
+    border: 4px solid #333;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.7);
+    transition: transform 0.3s ease-in-out;
+   animation: growAnimation 1.5s forwards;
+   -webkit-touch-callout: none; /* Untuk perangkat iOS */
+        -webkit-user-select: none; /* Nonaktifkan pemilihan teks *//* Nonaktifkan pemilihan teks */
+        -ms-user-select: none; /* Nonaktifkan pemilihan teks */
+        -moz-user-select: none; /* Nonaktifkan pemilihan teks */
+        pointer-events: none; /* Nonaktifkan semua interaksi dengan gambar */
+}
+@keyframes growAnimation {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+    
+.profile-photo:hover {
+    transform: scale(1.09);
+}
+
+.profile-name {
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+   font-family: 'Poppins', sans-serif;
+    color: #ffbd12;
+    margin-left: 0px;
+}
+
+.profile-description {
+    font-size: 26px;
+    color: #88c0d0;
+    opacity: 0; /* Awalnya tidak terlihat */
+    animation: fadeIn 4s forwards;
+}
+
+.profile-details {
+    font-size: 20px;
+    font-family: arial, serif;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: bold;
+    max-width: 100%;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    opacity: 0; /* Awalnya tidak terlihat */
+    animation: fadeIn 5s forwards; /* Menambahkan animasi */
+}
+
+/* Mendefinisikan animasi fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Mulai dari transparan */
+    }
+    to {
+        opacity: 1; /* Berakhir dengan tampak sepenuhnya */
+    }
+}
+.btn-detail {
+    display: inline-block;
+    padding: 3px 15px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px 5px 5px 5px;
+    transition: background-color 0.3s ease;
+    border: 1.5px solid #1c86ee;
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.9);
+    margin: 15px;
+    font-size: 20px;
+}
+
+.btn-detail:hover {
+    background-color: #222;
+}
+
+#portal {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #29323b;
+    color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 0 0px rgba(30, 144, 255, 0.5);
+}
+    #audio-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 20px;
+    background: #2d363f;
+    color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 0 0px rgba(30, 144, 255, 0.5);
+}
+    .audio-player {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.play-pause {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 24px; /* Ukuran ikon */
+}
+
+.play-icon, .pause-icon {
+    display: none; /* Menyembunyikan ikon secara default */
+}
+
+.play-icon {
+    display: block; /* Menampilkan ikon play default */
+}
+
+.pause-icon {
+    display: none; /* Menampilkan ikon pause hanya saat diperlukan */
+}
+
+.progress {
+    flex-grow: 1;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Jarak rapat antara waktu saat ini dan durasi */
+    font-family: monospace;
+    font-size: 1.2em; /* Ukuran font lebih besar */
+    color: #000; /* Warna teks hitam */
+}
+
+#portal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: auto;
+   max-width: 600px;
+}
+
+.btn-portal {
+    padding: 10px 20px;
+    background-color: #333;
+    height: auto;
+    max-width: auto;
+    color: #fff;
+    display: flex;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #1c86ee;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 10 10px rgba(30, 144, 255, 0.9);
+    font-size: 18px;
+}
+
+.btn-portal:hover {
+    background-color: #111;
+  box-shadow: 0 0 20px rgba(30, 144, 255, 0.9);
+}
+    /* Fade-in-up: Muncul dari bawah ke atas, menutup dari atas ke bawah */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(50px);  /* Mulai dari bawah */
+    transition: opacity 1s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);  /* Pindah ke posisi normal */
+}
+
+.fade-in-up.closing {
+    opacity: 0;
+    transform: translateY(-50px); /* Bergerak ke atas untuk menutup */
+}
+    /* Fade-in-down: Muncul dari atas ke bawah, menutup dari bawah ke atas */
+.fade-in-down {
+    opacity: 0;
+    transform: translateY(-50px);  /* Mulai dari atas */
+    transition: opacity 1s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-down.visible {
+    opacity: 1;
+    transform: translateY(0);  /* Pindah ke posisi normal */
+}
+
+.fade-in-down.closing {
+    opacity: 0;
+    transform: translateY(50px); /* Bergerak ke bawah untuk menutup */
+}
+/* Animasi fade-in (dari kecil ke besar) */
+.fade-in {
+    opacity: 0;
+    transform: scale(0.5); /* Mulai dari kecil */
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: scale(1); /* Membesar */
+}
+
+.fade-in.closing {
+    opacity: 0;
+    transform: scale(0.5); /* Kembali mengecil */
+}
+
+/* Animasi fade-in-side (muncul dari kiri ke tengah) */
+.fade-in-side {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.8); /* Muncul dari kiri dan kecil */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-side.visible {
+    opacity: 1;
+    transform: translateX(0) scale(1); /* Bergerak ke tengah dan membesar */
+}
+
+.fade-in-side.closing {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.8); /* Kembali ke kiri dan mengecil */
+}
+ #typing {
+            overflow: hidden;
+            border-right: 3px solid;
+            white-space: nowrap;
+            animation: typing 1s steps(45, end), blink-caret .75s step-end infinite;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: transparent; }
+        }
+    .btnbacktext {
+       margin-top: 4px;
+       max-height: auto;
+       margin-left: 0.4px;
+       width: 100%;
+    }
+   .btnbacktext:hover {
+     color: #1c86ee;
+   }
+     .typing {
+            overflow: hidden;
+            border-right: 3px solid;
+            white-space: nowrap;
+            animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: transparent; }
+        }
+    span {
+       color: #2979ff;
+    }
+
+    .pengumuman {
+    text-align: left;
+    font-family: 'Lexend Deca';
+    padding: 40px 20px;
+    background-color: #25313a;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    height: auto;
+       -webkit-touch-callout: none; /* Untuk perangkat iOS */
+        -webkit-user-select: none; /* Nonaktifkan pemilihan teks */
+        -moz-user-select: none; /* Nonaktifkan pemilihan teks */
+        -ms-user-select: none; /* Nonaktifkan pemilihan teks */
+        user-select: none; 
+}
+#device-info {
+    background-color: #262e36; /* Warna background yang sama dengan informasi umum */
+    color: green; /* Warna teks putih */
+    padding: 30px;
+    border-radius: 0px; /* Sudut melengkung */
+    box-shadow:; /* Sedikit bayangan untuk efek catatan */
+    position: relative;
+    z-index: 1;
+    height: auto;
+    font-weigth: Typewriter;
+}
+
+#device-info h2 {
+    margin-top: 10px;
+    font-size: 24px;
+}
+}
+
+#device-list {
+    margin-top: 0px;
+}
+
+#device-list .comment {
+    background: #262e36; /* Latar belakang item informasi */
+    padding: 15px;
+    margin-bottom: -20px;
+    border-radius: 4px; /* Sudut melengkung */
+    color: #e1e1e1; /* Warna teks putih */
+     /* Sedikit bayangan untuk efek catatan */
+}
+
+#device-list p {
+    color: green; /* Warna teks putih */
+      
+    }
+    #per-foto {
+       background-color: #1d374f;
+       text-align: center;
+       padding: 20px 20px;
+       border-radius: 12px;
+       font-weight: bold;
+       box-shadow: 0 0 10px #1c86ee;
+       margin: 15px;
+       
+    }
+    #img-button {
+    padding: 5px 0;
+    background-color: #1a3247;
+    width: 280px;
+    margin: center;
+    color: #fff;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid #1c86ee;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
+    font-size: 13px;
+    }
+   #img-button:hover {
+     background-color: #222;
+     box-shadow: 0 0 15px rgba(30, 144, 255, 0.9);
+   }
+       #foto {
+        -webkit-touch-callout: none; /* Untuk perangkat iOS */
+        -webkit-user-select: none; /* Nonaktifkan pemilihan teks *//* Nonaktifkan pemilihan teks */
+        -ms-user-select: none; /* Nonaktifkan pemilihan teks */
+        -moz-user-select: none; /* Nonaktifkan pemilihan teks */
+        -webkit-user-drag: none; /* Nonaktifkan semua interaksi dengan gambar */
+    }
+  </style> 
+ </head> 
+   <header>
+  <div class="header-content">
+    <div id="digital-clock" class="digital-clock"></div> <!-- Elemen Jam Digital -->
+  </div>
+</header>
+ <body>  <!-- Bagian Foto Profil dan Deskripsi --> 
+    <!-- Tombol Scroll ke Atas -->
+<button id="scrollToTopBtn" title="Back to Top">
+   <p class="btnbacktext"><i class="fas fa-arrow-up"></i></p>
+</button>
+  <section id="profile-pic">
+   <img src="https://lysander-frost.github.io/azka/profile.jpg" class="profile-photo" alt="Foto Profil"> 
+   <div class="text-container">
+       <h1 class="profile-name" id="typing">AZKA ARRODHI</h1>
+   </div>
+   <p class="profile-description">I am a junior high school student, now I am in eighth grade</p> 
+   <p class="profile-details"> date of birth: 05-05-2011 <br> Country: Indonesia <br> Hobbies: Playing chess & Web design</p> 
+   <a href="https://scrinshoted.github.io/" id="detail-button" class="btn-detail">see more</a>
+</section> 
+  <section id="skills"> 
+   <h1 class="fade-in-side" style="margin-left: -5px; font-size: 30px; padding: 20px 0;">Welcome to My <span>Website</span>!</h1>
+<p class="fade-in-side">Hello, my name is <strong>Azka</strong>, an 8th-grade middle school student with a keen interest in web design and playing chess. Both hobbies provide me with opportunities to think creatively and strategically.</p>
+
+<h2 class="fade-in-side">How My Hobbies Began</h2>
+<p class="fade-in-side">My interest in web design started when I saw how websites are built and function. I began by learning <strong>HTML</strong> to create the basic structure of web pages, then moved on to <strong>CSS</strong> to enhance their appearance, and finally delved into <strong>JavaScript</strong> to make the sites more interactive.</p>
+<p class="fade-in-side">In addition, I also have a passion for chess. I started by learning the basic rules and common openings. Then, I deepened my knowledge of tactics and strategies such as forks and checkmating, as well as how to plan my moves to achieve victory.</p>
+
+<h2 class="fade-in-side">Using AI in Web Design</h2>
+<p class="fade-in-side">In web design, I often use AI to help solve complex coding issues. AI is incredibly useful when I encounter hard-to-find bugs or need to expedite the development process with efficient solutions.</p>
+
+<p class="fade-in-side">Although I am still in the learning process, every small step in both hobbies helps me grow and improve.</p>
+
+  </section> 
+  <section id="albums"> 
+   <h1 class="fade-in-up" style="text-align: center; padding: 30px 0; font-size: 30px"><span>School</span> Moments</h1> 
+   <div class="gallery"> 
+      <div class="fade-in" id="per-foto"> <img src="https://lysander-frost.github.io/Foto/IMG-20240429-WA0026.jpg" alt="image seven class" id="foto"><p></p> <a href="https://drive.usercontent.google.com/u/0/uc?id=11ijGOKRycTwu_tp1i3nWKQGGlDCw0PPh&export=download" id="img-button">Download Image<i class="fas fa-download" style="margin-top: 3px; margin-left: 7px;"></i></a></div>
+      <div class="fade-in" id="per-foto"> <img src="https://lysander-frost.github.io/Foto/IMG-20240429-WA0019.jpg" alt="image seven class" id="foto"><p></p> <a href="https://drive.usercontent.google.com/u/0/uc?id=12EPNvMJwclerWs1Y7KwSTaIVj-e5L-jS&export=download" id="img-button">Download Image<i class="fas fa-download" style="margin-top: 3px; margin-left: 7px;"></i></a></div>
+      <div class="fade-in" id="per-foto"> <img src="https://lysander-frost.github.io/Foto/IMG-20240429-WA0009.jpg" alt="image seven class" id="foto"><p></p> <a href="https://drive.usercontent.google.com/u/0/uc?id=12enremuIm5ITQsOV8RyECdq4q8-VhpG1&export=download" id="img-button">Download Image<i class="fas fa-download" style="margin-top: 3px; margin-left: 7px;"></i></a></div>
+      <div class="fade-in" id="per-foto"> <img src="https://lysander-frost.github.io/Foto/IMG-20240429-WA0037.jpg" alt="image seven class" id="foto"><p></p> <a href="https://drive.usercontent.google.com/u/0/uc?id=11Vp_sZQMjWWUfIc6cogPjkrAAbyt30UY&export=download" id="img-button">Download Image<i class="fas fa-download" style="margin-top: 3px; margin-left: 7px;"></i></a></div>
+      <div class="fade-in" id="per-foto"> <img src="https://lysander-frost.github.io/Foto/IMG-20240429-WA0007.jpg" alt="image seven class" id="foto"><p></p> <a href="https://drive.usercontent.google.com/u/0/uc?id=11Vp_sZQMjWWUfIc6cogPjkrAAbyt30UY&export=download" id="img-button">Download Image<i class="fas fa-download" style="margin-top: 3px; margin-left: 7px;"></i></a></div>
+      <div class="fade-in" id="per-foto"> <img src="https://lysander-frost.github.io/Foto/IMG-20240429-WA0005.jpg" alt="image seven class" id="foto"><p></p> <a href="https://drive.usercontent.google.com/u/0/uc?id=12gesEmkIFh2aiRBppyeuq-vw_rF1bir5&export=download" id="img-button">Download Image<i class="fas fa-download" style="margin-top: 3px; margin-left: 7px;"></i></a></div>
+   </div> 
+  </section> <!-- Container untuk Tombol Portal --> 
+<section class="pengumuman"> 
+  <h1 class="fade-in" style="padding: 20px 0; font-size: 30px;">what I am currently <span>learning</span>?</h1> 
+   <ul class="fade-in-side">
+  <li>Chess Openings: Learning various openings to control the game from the start.</li>
+  <li>Chess Tactics: Mastering tactics like check, fork, and traps to win games.</li>
+  <li>Positional Strategy: Learning how to position pieces effectively for a positional advantage.</li>
+  <li>Endgame: Studying endgame strategies to convert an advantage into victory.</li>
+  <li>Game Analysis: Developing skills to analyze chess games and improve mistakes.</li>
+  <li>Defense: Learning how to defend the king and counter opponent attacks effectively.</li>
+   </ul>
+     <h1>‎‎‎‎‎‎‎‎ㅤ</h1>
+   <small style="color: gray; font-size: 16px;">‎‎‎‎‎‎‎‎22-09-2024</small>
+</section>
+<section id="audio-container">
+    <h1 class="fade-in-side" style="padding: 30px 0;">My <span>favorite songs</span></h1><p style="color: #d1d1d1; margin-botrom: 15px;" class="fade-in">I enjoy songs with distinctive and captivating melodies that leave a lasting impression and elevate my mood.</p>
+    <div class="fade-in">
+        <!-- Audio Player 1 -->
+        <div class="audio-player">
+            <audio id="audio1" src="https://lysander-frost.github.io/Foto/Scus.mp3"></audio>
+            <div class="controls">
+                <button class="play-pause">
+                    <i class="fa-solid fa-play play-icon"></i>
+                    <i class="fa-solid fa-pause pause-icon"></i>
+                </button>
+                <input type="range" class="progress" value="0" max="100">
+                <span class="time">
+                    <span><a href="https://drive.usercontent.google.com/u/0/uc?id=1Sbyjqxl34TobNJ6Fl93B3PWU8TzqZWF2&export=download"><i class="fas fa-download" style="color: #333; padding: 0 10px;"></i></a></span>
+                </span>
+            </div>
+        </div>
+        <!-- Audio Player 2 -->
+        <div class="audio-player">
+            <audio id="audio2" src="https://lysander-frost.github.io/Foto/sktm.mp3"></audio>
+            <div class="controls">
+                <button class="play-pause">
+                    <i class="fa-solid fa-play play-icon"></i>
+                    <i class="fa-solid fa-pause pause-icon"></i>
+                </button>
+                <input type="range" class="progress" value="0" max="100">
+                <span class="time">
+                    <span><a href="https://drive.usercontent.google.com/u/0/uc?id=1SbAtzSVA2UtoNt4wcnRngjYICD6XK-La&export=download"><i class="fas fa-download" style="color: #333; padding: 0 10px;"></i></a></span>
+                </span>
+            </div>
+        </div>
+        <!-- Audio Player 3 -->
+        <div class="audio-player">
+            <audio id="audio3" src="https://lysander-frost.github.io/Foto/orang-yang-sama.mp3"></audio>
+            <div class="controls">
+                <button class="play-pause">
+                    <i class="fa-solid fa-play play-icon"></i>
+                    <i class="fa-solid fa-pause pause-icon"></i>
+                </button>
+                <input type="range" class="progress" value="0" max="100">
+                <span class="time">
+                    <span></span> 
+                    <span><a href="https://drive.usercontent.google.com/u/0/uc?id=1SaikMselIcSr_HRBRl_Fu39cFJMXToYg&export=download"><i class="fas fa-download" style="color: #333; padding: 0 10px;"></i></a></span>
+                </span>
+            </div>
+        </div>
+        <!-- Audio Player 4 -->
+        <div class="audio-player">
+            <audio id="audio4" src="https://lysander-frost.github.io/Foto/bukti.mp3"></audio>
+            <div class="controls">
+                <button class="play-pause">
+                    <i class="fa-solid fa-play play-icon"></i>
+                    <i class="fa-solid fa-pause pause-icon"></i>
+                </button>
+                <input type="range" class="progress" value="0" max="100">
+                <span class="time">
+                    <span></span>
+                    <span><a href="https://drive.usercontent.google.com/u/0/uc?id=1SZtsM5SbEQoKtr4f_YFF4SgxuL2awWzn&export=download"><i class="fas fa-download" style="color: #333; padding: 0 10px;"></i></a></span>
+                </span>
+            </div>
+        </div>
+        <!-- Audio Player 5 -->
+        <div class="audio-player">
+            <audio id="audio5" src="https://lysander-frost.github.io/Foto/onmywaw.webm"></audio>
+            <div class="controls">
+                <button class="play-pause">
+                    <i class="fa-solid fa-play play-icon"></i>
+                    <i class="fa-solid fa-pause pause-icon"></i>
+                </button>
+                <input type="range" class="progress" value="0" max="100">
+                <span class="time">
+                    <span></span> 
+                    <span><a href="https://drive.usercontent.google.com/u/0/uc?id=1O-IGuiy07zaXveFtdV4Gp4wLZhbMQSWv&export=download"><i class="fas fa-download" style="color: #333; padding: 0 10px;"></i></a></span>
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="portal"> 
+   <h1 style="padding: 30px 0;">Main <span>Portal</span></h1> <p style="color: #d1d1d1; margin-botrom: 15px;" class="fade-in">Welcome to our portal! Take quizzes, discover valuable information, provide feedback, and access exclusive content.</p>
+   <div id="portal-buttons" class="fade-in"> <a href="https://scratch.mit.edu/users/ZR_XAN/" class="btn-portal">Scratch Account</a> <a href="#" id="my-email" class="btn-portal">Send Feedback</a>  <a href="https://lysander-frost.github.io/azka/Information" class="btn-portal">Discover Information</a>  <a href="https://lysander-frost.github.io/Tespengetahuanumumdanlogika/quizonline" class="btn-portal">Quiz Page</a> <a href="https://lysander-frost.github.io/azka/specialcontent" class="btn-portal">special Content</a>
+   </div> 
+   </div> 
+  </section> <!-- Container Komentar (Ditempatkan di bagian paling bawah sebelum footer) --> 
+  <section id="device-info">
+   <h1 class="fade-in" style="padding: 10px 0; font-size: 30px; color: #fff;"><span>Recorded</span> visits</h1>
+     <class="profile-name typing-effect">
+   <div id="device-list" class="fade-in-side">
+     <!-- Informasi perangkat akan ditampilkan di sini -->
+   </div>
+</section>
+  <section id="contact"> 
+        <h1 id="h2-contact" class="fade-in">Are you <span>having</span> Problems?</h1>
+        <p class="fade-in">Please share your experience via the contact below right</p>
+
+        <ul id="ul-contact" class="fade-in">
+            <li><i class="fas fa-map-marker-alt" style="color: #1c86ee;"></i> <strong style="font-size: 15px;">Address</strong></li>
+            <p style="font-weight: normal; margin-top: -4px; font-size: 14px;">Lamongan Regency, East Java, Indonesia.</p>
+
+            <li id="li-contact"><i class="fas fa-user" style="color: #1c86ee;"></i> <strong style="font-size: 15px; margin">Number</strong></li>
+            <p style="font-weight: normal; margin-top: -4px; font-size: 14px;">+62 821-4290-9096</p>
+
+            <li><i class="fas fa-envelope" style="color: #1c86ee;"></i> <strong style="font-size: 15px;">Email Me</strong></li>
+            <p style="font-weight: normal; margin-top: -4px; font-size: 14px;">azkaarrodhi11@gmail.com</p>
+        </ul>
+        
+        <div class="social-icons fade-in">
+            <a href="https://wa.me/+6282142909096?text=>%20Halo,%20Azka!%20Saya%20dari%20website%20Anda.%0A%0A*Pesan:*%20"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/lynx.az.ka?igsh=NG11aGFlY3RwMmZ4"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@catsareanimals?_t=8pccq6d4g7T&_r=1"><i class="fab fa-tiktok"></i></a>
+            <a href="https://t.me/lysander_frost?text=Halo,%20Azka!%20Saya%20dari%20website%20Anda.%0A%0APesan:%20"><i class="fab fa-telegram"></i></a>
+        </div>
+        <p class="fade-in" style="margin-left: 35px; margin-top: 25px;"><span></span></p>
+    </section>
+  <footer> 
+     <div class="footer">
+     <p id="footer-text" class="fade-in">© 2024 by <span>Azka Arrodhi.</span> Thoughtfully made, respectfully <span>reserved</span>.
+     </p>
+        </div>
+  </footer> 
+     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   <script>
+         document.documentElement.setAttribute("translate", "no");
+     let currentlyPlaying = null;
+
+// Menambahkan event listener untuk setiap pemutar audio
+(function() {
+    // Namespace untuk audio player
+    const AudioPlayerNamespace = {
+        currentlyPlaying: null,
+
+        updatePlayPauseButton(audio, playIcon, pauseIcon) {
+            if (audio.paused || audio.currentTime === 0) {
+                playIcon.style.display = 'block';
+                pauseIcon.style.display = 'none';
+            } else {
+                playIcon.style.display = 'none';
+                pauseIcon.style.display = 'block';
+            }
+        },
+
+        playAudio(audio, playIcon, pauseIcon) {
+            if (this.currentlyPlaying && this.currentlyPlaying !== audio) {
+                this.currentlyPlaying.pause();
+                this.currentlyPlaying.currentTime = 0;
+            }
+            audio.play();
+            this.currentlyPlaying = audio;
+            this.updatePlayPauseButton(audio, playIcon, pauseIcon);
+        },
+
+        pauseAudio(audio, playIcon, pauseIcon) {
+            audio.pause();
+            this.currentlyPlaying = null;
+            this.updatePlayPauseButton(audio, playIcon, pauseIcon);
+        },
+
+        init() {
+            document.querySelectorAll('.audio-player').forEach(player => {
+                const audio = player.querySelector('audio');
+                const playPauseBtn = player.querySelector('.play-pause');
+                const playIcon = playPauseBtn.querySelector('.play-icon');
+                const pauseIcon = playPauseBtn.querySelector('.pause-icon');
+                const progress = player.querySelector('.progress');
+
+                // Memperbarui ikon saat metadata di-load
+                audio.addEventListener('loadedmetadata', () => {
+                    this.updatePlayPauseButton(audio, playIcon, pauseIcon);
+                });
+
+                audio.addEventListener('timeupdate', () => {
+                    const value = (audio.currentTime / audio.duration) * 100;
+                    progress.value = value;
+                    this.updatePlayPauseButton(audio, playIcon, pauseIcon);
+                });
+
+                playPauseBtn.addEventListener('click', () => {
+                    if (audio.paused) {
+                        this.playAudio(audio, playIcon, pauseIcon);
+                    } else {
+                        this.pauseAudio(audio, playIcon, pauseIcon);
+                    }
+                });
+
+                progress.addEventListener('input', () => {
+                    const time = (progress.value / 100) * audio.duration;
+                    audio.currentTime = time;
+                });
+
+                audio.addEventListener('ended', () => {
+                    this.pauseAudio(audio, playIcon, pauseIcon);
+                });
+            });
+        }
+    };
+
+    // Inisialisasi audio player
+    AudioPlayerNamespace.init();
+})();
+     
+
+     
+     window.onload = function() {
+    setTimeout(function() {
+        window.scrollTo(0, 0);
+    }, 100); // menunggu 100 milidetik sebelum menggulir ke atas
+};
+
+// Namespace untuk ScrollToTop
+const ScrollToTopNamespace = (function() {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    const profileSection = document.getElementById('portal');
+    const windowHeight = window.innerHeight;
+
+    // Fungsi untuk menampilkan tombol saat profil tidak terlihat
+    function toggleScrollToTopBtn() {
+        const profileBottom = profileSection.getBoundingClientRect().bottom;
+
+        // Tampilkan tombol jika profil sudah tidak terlihat di viewport
+        if (profileBottom < 0) {
+            scrollToTopBtn.classList.add('show');
+        } else {
+            scrollToTopBtn.classList.remove('show');
+        }
+    }
+
+    // Fungsi untuk scroll ke bagian atas/profil
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0, 
+            behavior: 'smooth'  // Scroll secara halus
+        });
+    }
+
+    // Fungsi untuk memulai event listener
+    function init() {
+        // Memantau scroll untuk menampilkan/menyembunyikan tombol
+        document.addEventListener('scroll', toggleScrollToTopBtn);
+
+        // Fungsi untuk scroll ke atas ketika tombol diklik
+        scrollToTopBtn.addEventListener('click', scrollToTop);
+    }
+
+    // Return object untuk menginisialisasi namespace
+    return {
+        init: init
+    };
+})();
+
+// Inisialisasi ketika konten selesai dimuat
+document.addEventListener('DOMContentLoaded', ScrollToTopNamespace.init);
+     
+// Namespace untuk Animasi Typing
+const TypingAnimationNamespace = (function() {
+    // Fungsi untuk menghentikan dan memulai ulang animasi typing saat scroll
+    function resetTypingAnimation() {
+        const typingElement = document.querySelector('#typing');
+        if (typingElement) {
+            typingElement.style.animation = 'none'; // Hentikan animasi
+            typingElement.offsetHeight; // Trigger reflow
+            typingElement.style.animation = ''; // Mulai ulang animasi
+        }
+    }
+
+    // Fungsi untuk memulai event listener
+    function init() {
+        document.addEventListener('scroll', resetTypingAnimation);
+    }
+
+    // Return object untuk menginisialisasi namespace
+    return {
+        init: init
+    };
+})();
+
+// Inisialisasi ketika konten selesai dimuat
+document.addEventListener('DOMContentLoaded', TypingAnimationNamespace.init);
+document.addEventListener('DOMContentLoaded', function () {
+    const deviceInfo = [
+        `User Agent: ${navigator.userAgent}`,
+        `Platform: ${navigator.platform}`,
+        `Language: ${navigator.language}`,
+        `Screen Resolution: ${window.screen.width} x ${window.screen.height}`,
+        `Browser Width: ${window.innerWidth}`,
+        `Browser Height: ${window.innerHeight}`
+    ];
+
+    const deviceList = document.getElementById('device-list');
+
+    if (deviceInfo.length > 0) {
+        deviceInfo.forEach(info => {
+            const infoDiv = document.createElement('div');
+            infoDiv.className = 'comment'; // Ganti kelas jika perlu
+            infoDiv.textContent = info;
+            deviceList.appendChild(infoDiv);
+        });
+    } else {
+        const noInfoMessage = document.createElement('p');
+        noInfoMessage.textContent = 'Informasi perangkat Unfined';
+        deviceList.appendChild(noInfoMessage);
+    }
+
+    // Ambil dan tampilkan alamat IP menggunakan ipify API
+    fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+            const ipDiv = document.createElement('div');
+            ipDiv.className = 'comment'; // Ganti kelas jika perlu
+            ipDiv.textContent = `IP Address: ${data.ip}`;
+            deviceList.appendChild(ipDiv);
+        })
+        .catch(error => {
+            console.error('Terjadi kesalahan saat mengambil alamat IP:', error);
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'comment'; // Ganti kelas jika perlu
+            errorDiv.textContent = 'IP Address: Unfined';
+            deviceList.appendChild(errorDiv);
+        });
+
+    // Tambahkan catatan waktu pengunjung mengakses web
+    const accessTime = new Date();
+    const formattedTime = `${accessTime.getFullYear()}-${('0' + (accessTime.getMonth() + 1)).slice(-2)}-${('0' + accessTime.getDate()).slice(-2)} ${('0' + accessTime.getHours()).slice(-2)}:${('0' + accessTime.getMinutes()).slice(-2)}:${('0' + accessTime.getSeconds()).slice(-2)}`;
+
+    const timeDiv = document.createElement('div');
+    timeDiv.className = 'comment'; // Ganti kelas jika perlu
+    timeDiv.textContent = `Access Time: ${formattedTime}`;
+    deviceList.appendChild(timeDiv);
+});
+     
+document.addEventListener('DOMContentLoaded', function () {
+    const emailButton = document.getElementById('my-email');
+
+    emailButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Mencegah default action
+
+        const userAgent = navigator.userAgent;
+        const platform = navigator.platform;
+        const language = navigator.language;
+        const screenWidth = window.screen.width;
+        const screenHeight = window.screen.height;
+        const browserWidth = window.innerWidth;
+        const browserHeight = window.innerHeight;
+        const accessTime = new Date();
+        const formattedTime = `${accessTime.getFullYear()}-${('0' + (accessTime.getMonth() + 1)).slice(-2)}-${('0' + accessTime.getDate()).slice(-2)} ${('0' + accessTime.getHours()).slice(-2)}:${('0' + accessTime.getMinutes()).slice(-2)}:${('0' + accessTime.getSeconds()).slice(-2)}`;
+
+        // Menggunakan ipify API untuk mendapatkan IP address
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                const ipAddress = data.ip;
+                
+                // Semua info perangkat dimasukkan ke subjek
+                const subject = `Platform: ${platform}, Resolusi Layar: ${screenWidth}x${screenHeight}, Browser: ${browserWidth}x${browserHeight}, Bahasa: ${language}, IP: ${ipAddress}, User-Agent: ${userAgent}, Waktu Akses: ${formattedTime}`;
+
+                // Body hanya untuk menulis pesan
+                const emailBody = `Tulis pesan Anda di sini:`;
+
+                const mailtoLink = `mailto:azkaarrodhi11@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+                window.location.href = mailtoLink; // Membuka aplikasi email dengan subjek yang sudah diisi
+            })
+            .catch(error => {
+                console.error('Terjadi kesalahan saat mengambil alamat IP:', error);
+                alert('Tidak dapat mengambil informasi IP. Coba lagi nanti.');
+            });
+    });
+});
+     function updateClock() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const timeString = `${hours}:${minutes}:${seconds}`;
+    
+    document.getElementById('digital-clock').textContent = timeString;
+  }
+
+  // Memperbarui jam setiap detik
+  setInterval(updateClock, 10);
+
+  // Memperbarui jam saat halaman dimuat
+  document.addEventListener('DOMContentLoaded', updateClock);
+     
+document.addEventListener('DOMContentLoaded', function () {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    const profileSection = document.getElementById('profile-pic');
+    const fadeInElements = document.querySelectorAll('.fade-in, .fade-in-side, .fade-in-up, .fade-in-down'); // Tambahkan fade-in-down
+    let profileSeen = false; // Flag untuk menandai apakah profil sudah terlihat
+    let topReached = false;  // Flag untuk menandai jika scroll sudah sampai ke atas
+    
+    // Fungsi untuk menjalankan animasi scroll
+    function runScrollAnimation() {
+        const windowHeight = window.innerHeight;
+
+        // Deteksi apakah profil sudah terlihat sepenuhnya
+        const profileTop = profileSection.getBoundingClientRect().top;
+        const profileBottom = profileSection.getBoundingClientRect().bottom;
+
+        if (profileTop < windowHeight && profileBottom > 0) {
+            profileSeen = true; // Tandai bahwa profil sudah terlihat
+        }
+
+        // Deteksi apakah scroll sudah sampai ke atas
+        if (window.scrollY === 0) {
+            topReached = true; // Tandai bahwa pengguna sudah mencapai bagian atas
+            fadeInElements.forEach(el => {
+                el.classList.add('closing'); // Tambahkan animasi penutup saat kembali ke bagian atas
+                el.classList.remove('visible'); // Hilangkan kelas visible
+            });
+        } else {
+            topReached = false;
+        }
+
+        // Jika profil sudah terlihat dan scroll tidak berada di bagian atas
+        if (profileSeen && !topReached) {
+            fadeInElements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const elementBottom = el.getBoundingClientRect().bottom;
+
+                // Muncul ketika elemen terlihat di viewport
+                if (elementTop < windowHeight && elementBottom > 100) {
+                    el.classList.add('visible');
+                    el.classList.remove('closing'); // Hilangkan animasi penutup
+                }
+            });
+        }
+    }
+
+    // Memantau scroll untuk menjalankan animasi
+    document.addEventListener('scroll', runScrollAnimation);
+
+    // Fungsi untuk scroll ke bagian atas/profil
+    scrollToTopBtn.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0, 
+            behavior: 'smooth'  // Scroll secara halus
+        });
+    });
+});
+
+// Memantau scroll untuk menjalankan animasi
+document.addEventListener('scroll', runScrollAnimation);
+
+</script>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LEHKYG2QKY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LEHKYG2QKY');
+</script>
+ </body>
+ </html>
