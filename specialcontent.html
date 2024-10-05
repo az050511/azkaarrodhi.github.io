@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Khodam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        td[contenteditable="true"] {
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cek Khodam</h1>
+        <p>masukkan nama lalu klik enter</p>
+    </header>
+    
+    <div class="container">
+        <table id="hasilTabel">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Khodam</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td contenteditable="true" onkeydown="handleKeyDown(event, this)" onblur="updateKhodam(this)"></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const khodamList = [
+    'Mbah Galak Santuy',
+    'Nyai Kepo',
+    'Jurig Gabut',
+    'Bang Toyib Astral',
+    'Si Butet Mager',
+    'Om Pocong Keren',
+    'Nyi Missqueen',
+    'Jin Rebah',
+    'Kuntilanak Santai',
+    'Sundel KPop',
+    'Si Ujang Mistis',
+    'Tuyul Selfie',
+    'Setan Wibu',
+    'Mbah Kunyit',
+    'Genderuwo Bucin',
+    'Wewe TikTok',
+    'Hantu Freelance',
+    'Tuyul Financial Planner',
+    'Kuntil Woles',
+    'Bang Kun Edgy',
+    'Nyi Minjem Uang',
+    'Setan Halu',
+    'Nenek Vibes',
+    'Pocong Flexing',
+    'Om Jurik BT',
+    'Bang Tuyul Hits',
+    'Jelangkung Influencer',
+    'Hantu Kolongan',
+    'Babeh Blorong',
+    'Jin Mageran',
+    'Setan Pinjaman Online',
+    'Butet Halu',
+    'Mbah Genderuwo OOTD',
+    'Hantu Kelas Menengah',
+    'Nyai Admin Grup WA',
+    'Kuntilanak Introvert',
+    'Tuyul Ngonten',
+    'Bang Blorong Baper',
+    'Jurik Overthinking',
+    'Setan Chillin',
+    'Wewe Gabut',
+    'Nyi Main ML',
+    'Pocong Ghibah',
+    'Si Tuyul Literasi',
+    'Hantu Anfaedah',
+    'Mbah Kunti Karaoke',
+    'Si Jurik Spoiler',
+    'Jin Drama',
+    'Kuntilanak Healing',
+    'Butet Penasaran',
+    'Setan Subuh',
+    'Mbah Pocong Keringetan',
+    'Nyi Eksis',
+    'Si Tuyul Bocil',
+    'Jurik Sepi Order',
+    'Om Blorong Chat Banyak',
+    'Bang Toyib di Multiverse',
+    'Si Jin Cari Signal',
+    'Hantu Sebar Hoax',
+    'Kuntilanak Self-Love',
+    'Tuyul Gadget',
+    'Nyi Mistis Frenzy',
+    'Jurik Ghosting',
+    'Butet Vibes On',
+    'Jin Ransel',
+    'Pocong Startup Founder',
+    'Setan WiFi Kenceng',
+    'Hantu PowerPoint',
+    'Kuntilanak Nyari Job',
+    'Mbah Pocong LDR',
+    'Om Tuyul Gabut',
+    'Nyi Mistis Hits',
+    'Genderuwo Healing',
+    'Butet Komunitas',
+    'Pocong Nyari Cuan',
+    'Tuyul Self-Improvement',
+    'Jurik Posting Story',
+    'Hantu No Filter',
+    'Setan Love Language',
+    'Nyi Mistis Nyari Diskon',
+    'Mbah Blorong Freelancer',
+    'Kuntilanak Nyari Insight',
+    'Tuyul Jagoan Skincare',
+    'Jin Magerzone',
+    'Om Jurik Kerja Sampingan',
+    'Wewe Jualan Online',
+    'Setan Podcast',
+    'Pocong Mabar',
+    'Jin Swipe Kanan',
+    'Hantu TTM',
+    'Butet Healing Goals',
+    'Bang Toyib Mistis Ngajarin',
+    'Jurik Self-Aware',
+    'Nyai Cari Endorse',
+    'Tuyul Social Media Detox',
+    'Pocong Coworking Space',
+    'Si Kunti Mobile Legend',
+    'Setan Twitteran',
+    'Bang Tuyul Staycation',
+    'Hantu Mantra Boss',
+    'Mbah Pocong di DM',
+    'Kuntilanak Bucin',
+    'Butet Bisnis Mistis',
+    'Jin Search Engine',
+    'Setan Meetup',
+    'Om Jurik Moona',
+    'Wewe Pengen Viral',
+    'Setan Full-Time Influencer',
+    'Pocong Cari Freelance',
+    'Tuyul Creator Mode',
+    'Hantu Trending Topic',
+    'Bang Toyib Alay',
+    'Mbah Blorong Baperan',
+    'Nyi Mistis Update Status',
+    'Jin Sok Sibuk',
+    'Butet Cari Pinjaman',
+    'Jurik Stalker Mistis',
+    'Setan Komisi',
+    'Nyi Blorong Open PO',
+    'Si Tuyul Tipe Extrovert',
+    'Hantu Menunda Tugas',
+    'Om Pocong Di Kantor',
+    'Jurik Eksplor Mistis',
+    'Kuntilanak Pamer Skill',
+    'Setan Freelancer',
+    'Bang Tuyul Community Leader',
+    'Jin Main Valorant',
+    'Butet Suara Mistis',
+    'Hantu Nyari Voucher',
+    'Wewe Ghosting di DM',
+    'Setan Flexing Followers',
+    'Tuyul Mistis Zumba',
+    'Pocong di Coffee Shop',
+    'Nyi Mistis di Webinar',
+    'Bang Genderuwo Casual',
+    'Jin Kelewat Peduli',
+    'Setan Check-in',
+    'Kuntilanak TikTok Challenge',
+    'Jurik Paling Hits',
+    'Mbah Pocong Rebranding',
+    'Wewe Main Reel',
+    'Tuyul CEO Mistis',
+    'Hantu NYAFO',
+    'Butet Bisnis Digital',
+    'Nyi Mistis Khusyuk',
+    'Pocong Jadi Host',
+    'Jurik Anxious',
+    'Si Kunti Ngaku Keren',
+    'Setan Campaign Mistis',
+    'Om Jurik Promo',
+    'Tuyul Content Creator',
+    'Jin Mistis Suka Cuan',
+    'Nyi Blorong Night Owl',
+    'Mbah Genderuwo Santuy',
+    'Wewe Anak Senja',
+    'Setan Refund Mistis',
+    'Jurik Mastermind',
+    'Kuntilanak Story Mistis',
+    'Bang Toyib Terpesona',
+    'Tuyul Influencer Pemula',
+    'Om Pocong Deadline',
+    'Hantu Mistis Pameran',
+    'Jin Kasmaran',
+    'Nyi Genderuwo Motivator',
+    'Setan Open Mic',
+    'Butet Gaming Mistis',
+    'Si Jurik Berani Baper',
+    'Pocong Kalah Challenge',
+    'Bang Toyib Nyasar',
+    'Kuntilanak Pinjem Kuota',
+    'Jurik Nyari Relasi',
+    'Mbah Blorong Fanboy',
+    'Wewe Mistis Captioner',
+    'Tuyul Fokus Cuan',
+    'Nyi Genderuwo Blogger',
+    'Setan Kepo Mistis',
+    'Om Pocong Cari Inspirasi',
+    'Butet Mistis Staycation',
+    'Hantu Gabut Banget',
+    'Jurik Berburu Karya',
+    'Bang Tuyul Mistis Penuh',
+    'Setan Chill Mistis',
+    'Si Jurik Content Planner',
+    'Jin Mistis di Kafe',
+    'Nyi Blorong Gigih',
+    'Wewe Back-to-Nature',
+    'Pocong Open Discussion',
+    'Tuyul Tipe Workaholic',
+    'Kuntilanak Konsep Gaul',
+    'Setan Manis Mistis',
+    'Om Jurik Cari Exposure',
+    'Jurik Pamer Sertifikat',
+    'Butet Usaha Mistis',
+    'Jin Self-Development',
+    'Hantu Lupa Password',
+    'Pocong Night Shift',
+    'Jurik Mistis Kolaborasi',
+    'Si Tuyul Pusing',
+    'Nyi Genderuwo Sibuk Meeting',
+    'Kuntilanak Mistis Paripurna'
+];
+        const nameToKhodam = new Map(); // Menyimpan khodam yang sudah diberikan untuk setiap nama
+
+        // Daftar nama yang harus selalu menghasilkan "Tidak ada"
+        const blockedNames = [
+            'Azka',
+            'Azka Arrodhi',
+            'Muhammad Azka Arrodhi',
+            'Muhammad Azka',
+            'M. Azka',
+            'M. Azka A.',
+            'M Azka',
+            'Muhammad Azka A',
+            'Muhammad Azka A.',
+            'M. Azka A.',
+            'M. Azka Arrodhi',
+            'Azka A',
+            'Azka A.',
+            'arrodhi'
+        ];
+
+        function normalizeString(str) {
+            return str.toLowerCase().replace(/\s+/g, ' ').trim();
+        }
+
+        function isBlockedName(nama) {
+            const normalizedNama = normalizeString(nama);
+            return blockedNames.some(name => normalizeString(name) === normalizedNama);
+        }
+
+        function getKhodamForName(nama) {
+            // Jika nama sudah ada dalam map, kembalikan khodam yang sudah ada
+            if (nameToKhodam.has(nama)) {
+                return nameToKhodam.get(nama);
+            }
+
+            // Dapatkan khodam yang tersedia
+            const availableKhodams = khodamList.filter(khodam => !Array.from(nameToKhodam.values()).includes(khodam));
+            if (availableKhodams.length === 0) {
+                // Jika semua khodam sudah digunakan, gunakan khodam yang sudah ada
+                return khodamList[Math.floor(Math.random() * khodamList.length)];
+            }
+
+            // Pilih khodam secara acak dari yang tersedia
+            const khodam = availableKhodams[Math.floor(Math.random() * availableKhodams.length)];
+            nameToKhodam.set(nama, khodam);
+            return khodam;
+        }
+
+        function isNameDuplicate(nama, currentCell) {
+            // Periksa jika nama tidak kosong dan sudah ada di tabel, kecuali di sel yang sama
+            if (nama.length === 0) return false;
+            const tableCells = document.querySelectorAll('#hasilTabel tbody td:first-child');
+            return Array.from(tableCells).some(cell => cell !== currentCell && normalizeString(cell.textContent.trim()) === normalizeString(nama));
+        }
+
+        function updateKhodam(cell) {
+            const nama = cell.textContent.trim();
+            const khodamCell = cell.nextElementSibling;
+
+            if (nama.length === 0) {
+                khodamCell.textContent = ''; // Kosongkan kolom khodam jika nama kosong
+                nameToKhodam.delete(nama); // Hapus khodam dari nama yang kosong
+            } else if (isBlockedName(nama)) {
+                // Jika nama termasuk dalam daftar yang diblokir, tampilkan "Tidak ada"
+                khodamCell.innerHTML = `<button onclick="window.location.href='about:blank'">Click Me</button>`;
+            } else if (isNameDuplicate(nama, cell)) {
+                alert("Nama sudah ada");
+                cell.textContent = ''; // Kosongkan sel yang tidak valid
+                khodamCell.textContent = '';
+            } else {
+                const khodam = getKhodamForName(nama);
+                khodamCell.textContent = khodam; // Tampilkan khodam yang sesuai
+            }
+        }
+
+        function handleKeyDown(event, cell) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Mencegah default action Enter key (newline dalam sel)
+
+                // Simpan nama yang dimasukkan untuk pengecekan
+                const nama = cell.textContent.trim();
+                const currentRow = cell.parentElement;
+                const table = document.getElementById('hasilTabel');
+                const lastRow = table.querySelector('tbody tr:last-child');
+
+                // Update khodam untuk sel yang aktif
+                updateKhodam(cell);
+
+                // Jika nama sudah ada, jangan tambah baris baru
+                if (!isNameDuplicate(nama, cell)) {
+                    // Menambah baris baru jika sel aktif adalah baris terakhir
+                    if (currentRow === lastRow) {
+                        addRow();
+                    }
+
+                    // Fokus pada sel nama berikutnya
+                    const nextCell = currentRow.nextElementSibling?.cells[0] || 
+                                     document.getElementById('hasilTabel').querySelector('tbody tr:last-child').cells[0];
+                    if (nextCell) {
+                        nextCell.focus();
+                    }
+                }
+            }
+        }
+
+        function addRow() {
+            const tabelBody = document.getElementById('hasilTabel').getElementsByTagName('tbody')[0];
+            const row = tabelBody.insertRow();
+            const cellNama = row.insertCell(0);
+            const cellKhodam = row.insertCell(1);
+            
+            cellNama.setAttribute('contenteditable', 'true');
+            cellNama.textContent = '';
+            cellNama.addEventListener('keydown', function(event) {
+                handleKeyDown(event, cellNama);
+            });
+            cellNama.addEventListener('blur', function() {
+                updateKhodam(cellNama);
+            });
+            
+            cellKhodam.textContent = '';
+        }
+    </script>
+</body>
+</html>
