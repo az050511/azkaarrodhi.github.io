@@ -1,0 +1,786 @@
+@media only screen and (min-width: 768px) {
+  body {
+    margin: 0;
+    font-size: 26px;
+    line-height: 1.6;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+#ul-contact {
+    font-size: 35px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    margin-left: 30px;
+}
+
+#ul-contact {
+    font-size: 35px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+    #li-contact {
+    font-size: 25px;
+    font-weight: bold;
+}
+  section {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+  }
+ #audio-container {
+    min-width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    align-items: center;
+    background: #2d363f;
+    color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 0 0px rgba(30, 144, 255, 0.5);
+ }
+   .social-icons a {
+    font-size: 35px;
+    color: #1c86ee;
+    transition: color 0.3s;
+    background-color: #23272b;
+    border-radius: 18px 0 18px 0;
+    height: auto;
+    padding: 4px 10px;
+    margin-top: 27px;
+    margin-left: 20px;
+}
+   .audio-player {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    width: 84%;
+    margin-left: 30px;
+}
+  header {
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    font-size: 35px;
+    max-width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+ footer {
+    width: 100%;
+    font-size: 20px;
+ }
+   #footer-text {
+      font-size: 20px;
+      width: 100%
+   }
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 0 15px;
+    font-size: 18px;
+    color: #333;
+  }
+   .digital-clock {
+    font-weight: Bold;
+    font-size: 42px;
+    background: linear-gradient(25deg, #ff3385, #00e6ff);
+      color: linear-gradient(25deg, #ff3385, #00e6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   margin-top: -20px;
+}
+   #portal {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #29323b;
+    color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 0 0px rgba(30, 144, 255, 0.5);
+}
+   #portal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 30px;
+    min-width: 85%;
+}
+}
+    /* Tambahkan gaya CSS untuk melebarkan textarea */
+    textarea {
+       /* Lebarkan textarea hingga 100% dari lebar container */
+      min-height: 100px; /* Tinggi minimum textarea */
+    }
+   body {
+    align-items: center;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px; /* Sesuaikan dengan tinggi header */
+    line-height: 1.6;
+    background-color: #272c36;
+    color: linear-gradient(50deg, #ff0000, #00ff00, #0000ff);
+   }  /* Untuk perangkat dengan lebar maksimal 600px (mobile) */
+    /* Style untuk tombol bulat di pojok kanan bawah */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    border: 0px solid #fff;
+    border-radius: 50%;
+    background-color: #222; /* Warna background */
+    color: white;
+    text-align: center;
+    display: none; /* Tidak tampil secara default */
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 0px 10px rgba(30, 144, 255, 0.9);
+    transition: opacity 0.3s ease;
+    animation: fadeIn 0.3s forwards;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Saat tombol terlihat, tambahkan opacity */
+#scrollToTopBtn.show {
+    display: block;
+    opacity: 1;
+}
+.digital-clock {
+    font-weight: Bold;
+    font-size: 32px;
+    color: #fff;
+    background: linear-gradient(25deg, #ff3385, #00e6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   margin-top: -20px;
+}
+
+header {
+    background: transpatent;
+    color: linear-gradient(45deg, #ff0000, #ff2222, #0000ff);
+    padding: 0px 0;
+    text-align: center;
+    animation: fadeInDown 2s;
+    position: sticky /* Tambahkan ini */
+    top: 0; /* Posisi di bagian atas */
+    left: 0; /* Posisi di sisi kiri */
+    width: 100%; /* Lebar penuh */
+    z-index: 1000; /* Menjaga agar tetap di atas elemen lain */
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease-in-out 1s;
+    animation-fill-mode: both;
+}
+
+h1 {
+    margin: 5px;
+    font-family: "Bree Serif", serif;
+}
+
+section {
+    padding: 40px;
+    margin: 0px auto;
+    background-color: #29323c;
+    color: #fff;
+    border-radius: 0px;
+    border: 0px solid #ff8200;
+    max-width: auto;
+    box-sizing: border-box;
+}
+
+#profile {
+    background-color: #555; /* Warna background khusus untuk profile */
+}
+
+#skills {
+    background-color: #1e282f; /* Warna background untuk skills */
+    border-height: 2px solid #1c86ee;
+    font-family: 'Lexend Deca';
+   font-size: 16px;
+   -webkit-touch-callout: none; /* Untuk perangkat iOS */
+        -webkit-user-select: none; /* Nonaktifkan pemilihan teks */
+        -moz-user-select: none; /* Nonaktifkan pemilihan teks */
+        -ms-user-select: none; /* Nonaktifkan pemilihan teks */
+        user-select: none; 
+}
+
+#albums {
+    background-color: #29323b;
+    padding: 20px; /* Warna background untuk albums */
+    height: auto;
+    margin-top: 0px;
+}
+
+#comments {
+    background-color: #1c1f24; /* Warna background untuk comments */
+}
+
+#contact {
+    background-color: #222; /* Warna background untuk contact */
+}
+
+h2 {
+    margin-top: 5px;
+    color: #fff;
+    text-align: left;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery img {
+    width: calc(290px - 10px);
+    height: auto;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
+    transition: transform 0.3s ease-in-out;
+    animation: opacity 0.8s ease-out, transform 0.8s ease-out;
+   -webkit-user-drag: none;
+    pointer-events: none;
+}
+
+#per-foto:hover {
+    transform: scale(1.08);
+    transition: transform 0.8s ease;
+}
+
+.comment {
+    background: #25282c;
+    padding: 50px 20px;
+    margin-bottom: 10px;
+    border-radius: 0px;
+    color: green;
+    border: 0px solid #1c86ee;
+    font-weigth: Typewriter;
+}
+
+section#contact {
+   text-align: left;
+    padding: 20px;
+    background-color: #2c3338;
+    border-radius: 10px;
+    color: #d1d1d1;
+}
+
+#h2-contact {
+    padding: 35px 10px;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+#span-contact {
+    color: #1e90ff;
+}
+
+#ul-contact {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#ul-contact {
+    font-size: 18px;
+    font-weight: bold;
+}   #li-contact {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#p-isi {
+    margin: 0px 0 20px;
+    font-ai
+}
+
+.social-icons {
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+   margin-top: 0;
+}
+
+.social-icons a {
+    font-size: 18px;
+    color: #1c86ee;
+    transition: color 0.3s;
+    background-color: #23272b;
+    border-radius: 18px 0 18px 0;
+    height: auto;
+    padding: 4px 10px;
+    margin-top: 27px;
+    margin-left: 10px;
+}
+
+.social-icons :hover {
+    box-shadow: 0 0 10px rgba(30, 144, 255, 0.9);
+}
+
+#p {
+    font-size: 16px;
+    margin-top: 25px;
+    color: #d1d1d1;
+    margin-left: 0px;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 0;
+    margin-top: -30px;
+    height: auto;
+}
+
+/* Animasi Fade-in untuk Header */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gaya untuk Foto Profil dengan Efek Glow */
+#profile-pic {
+    text-align: center;
+  font-family: 'Nerko One', cursive;
+    max-width: auto;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    height: auto;
+}
+.profile-photo {
+    width: 170px;
+    height: 170px;  
+    border-radius: 50%;
+    border: 4px solid #333;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.7);
+    transition: transform 0.3s ease-in-out;
+   animation: growAnimation 1.5s forwards;
+   -webkit-touch-callout: none; /* Untuk perangkat iOS */
+        -webkit-user-select: none; /* Nonaktifkan pemilihan teks *//* Nonaktifkan pemilihan teks */
+        -ms-user-select: none; /* Nonaktifkan pemilihan teks */
+        -moz-user-select: none; /* Nonaktifkan pemilihan teks */
+        pointer-events: none; /* Nonaktifkan semua interaksi dengan gambar */
+}
+@keyframes growAnimation {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+    
+.profile-photo:hover {
+    transform: scale(1.09);
+}
+
+.profile-name {
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+   font-family: 'Poppins', sans-serif;
+    color: #ffbd12;
+    margin-left: 0px;
+}
+
+.profile-description {
+    font-size: 26px;
+    color: #88c0d0;
+    opacity: 0; /* Awalnya tidak terlihat */
+    animation: fadeIn 4s forwards;
+}
+
+.profile-details {
+    font-size: 20px;
+    font-family: arial, serif;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: bold;
+    max-width: 100%;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    opacity: 0; /* Awalnya tidak terlihat */
+    animation: fadeIn 5s forwards; /* Menambahkan animasi */
+}
+
+/* Mendefinisikan animasi fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Mulai dari transparan */
+    }
+    to {
+        opacity: 1; /* Berakhir dengan tampak sepenuhnya */
+    }
+}
+.btn-detail {
+    display: inline-block;
+    padding: 3px 15px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px 5px 5px 5px;
+    transition: background-color 0.3s ease;
+    border: 1.5px solid #1c86ee;
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.9);
+    margin: 15px;
+    font-size: 20px;
+}
+
+.btn-detail:hover {
+    background-color: #222;
+}
+
+#portal {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #29323b;
+    color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 0 0px rgba(30, 144, 255, 0.5);
+}
+    #audio-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 20px;
+    background: #2d363f;
+    color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 0 0px rgba(30, 144, 255, 0.5);
+}
+    .audio-player {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.play-pause {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 24px; /* Ukuran ikon */
+}
+
+.play-icon, .pause-icon {
+    display: none; /* Menyembunyikan ikon secara default */
+}
+
+.play-icon {
+    display: block; /* Menampilkan ikon play default */
+}
+
+.pause-icon {
+    display: none; /* Menampilkan ikon pause hanya saat diperlukan */
+}
+
+.progress {
+    flex-grow: 1;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Jarak rapat antara waktu saat ini dan durasi */
+    font-family: monospace;
+    font-size: 1.2em; /* Ukuran font lebih besar */
+    color: #000; /* Warna teks hitam */
+}
+
+#portal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: auto;
+   max-width: 600px;
+}
+
+.btn-portal {
+    padding: 10px 20px;
+    background-color: #333;
+    height: auto;
+    max-width: auto;
+    color: #fff;
+    display: flex;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #1c86ee;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 10 10px rgba(30, 144, 255, 0.9);
+    font-size: 18px;
+}
+
+.btn-portal:hover {
+    background-color: #111;
+  box-shadow: 0 0 20px rgba(30, 144, 255, 0.9);
+}
+    /* Fade-in-up: Muncul dari bawah ke atas, menutup dari atas ke bawah */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(50px);  /* Mulai dari bawah */
+    transition: opacity 1s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);  /* Pindah ke posisi normal */
+}
+
+.fade-in-up.closing {
+    opacity: 0;
+    transform: translateY(-50px); /* Bergerak ke atas untuk menutup */
+}
+    /* Fade-in-down: Muncul dari atas ke bawah, menutup dari bawah ke atas */
+.fade-in-down {
+    opacity: 0;
+    transform: translateY(-50px);  /* Mulai dari atas */
+    transition: opacity 1s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-down.visible {
+    opacity: 1;
+    transform: translateY(0);  /* Pindah ke posisi normal */
+}
+
+.fade-in-down.closing {
+    opacity: 0;
+    transform: translateY(50px); /* Bergerak ke bawah untuk menutup */
+}
+/* Animasi fade-in (dari kecil ke besar) */
+.fade-in {
+    opacity: 0;
+    transform: scale(0.5); /* Mulai dari kecil */
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: scale(1); /* Membesar */
+}
+
+.fade-in.closing {
+    opacity: 0;
+    transform: scale(0.5); /* Kembali mengecil */
+}
+
+/* Animasi fade-in-side (muncul dari kiri ke tengah) */
+.fade-in-side {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.8); /* Muncul dari kiri dan kecil */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-side.visible {
+    opacity: 1;
+    transform: translateX(0) scale(1); /* Bergerak ke tengah dan membesar */
+}
+
+.fade-in-side.closing {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.8); /* Kembali ke kiri dan mengecil */
+}
+ #typing {
+            overflow: hidden;
+            border-right: 3px solid;
+            white-space: nowrap;
+            animation: typing 1s steps(45, end), blink-caret .75s step-end infinite;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: transparent; }
+        }
+    .btnbacktext {
+       margin-top: 4px;
+       max-height: auto;
+       margin-left: 0.4px;
+       width: 100%;
+    }
+   .btnbacktext:hover {
+     color: #1c86ee;
+   }
+     .typing {
+            overflow: hidden;
+            border-right: 3px solid;
+            white-space: nowrap;
+            animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: transparent; }
+        }
+    span {
+       color: #2979ff;
+    }
+
+    .pengumuman {
+    text-align: left;
+    font-family: 'Lexend Deca';
+    padding: 40px 20px;
+    background-color: #25313a;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    height: auto;
+       -webkit-touch-callout: none; /* Untuk perangkat iOS */
+        -webkit-user-select: none; /* Nonaktifkan pemilihan teks */
+        -moz-user-select: none; /* Nonaktifkan pemilihan teks */
+        -ms-user-select: none; /* Nonaktifkan pemilihan teks */
+        user-select: none; 
+}
+#device-info {
+    background-color: #262e36; /* Warna background yang sama dengan informasi umum */
+    color: green; /* Warna teks putih */
+    padding: 30px;
+    border-radius: 0px; /* Sudut melengkung */
+    box-shadow:; /* Sedikit bayangan untuk efek catatan */
+    position: relative;
+    z-index: 1;
+    height: auto;
+    font-weigth: Typewriter;
+}
+
+#device-info h2 {
+    margin-top: 10px;
+    font-size: 24px;
+}
+}
+
+#device-list {
+    margin-top: 0px;
+}
+
+#device-list .comment {
+    background: #262e36; /* Latar belakang item informasi */
+    padding: 15px;
+    margin-bottom: -20px;
+    border-radius: 4px; /* Sudut melengkung */
+    color: #e1e1e1; /* Warna teks putih */
+     /* Sedikit bayangan untuk efek catatan */
+}
+
+#device-list p {
+    color: green; /* Warna teks putih */
+      
+    }
+    #per-foto {
+       background-color: #1d374f;
+       text-align: center;
+       padding: 20px 20px;
+       border-radius: 12px;
+       font-weight: bold;
+       box-shadow: 0 0 10px #1c86ee;
+       margin: 15px;
+       
+    }
+    #img-button {
+    padding: 5px 0;
+    background-color: #1a3247;
+    width: 280px;
+    margin: center;
+    color: #fff;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid #1c86ee;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
+    font-size: 13px;
+    }
+   #img-button:hover {
+     background-color: #222;
+     box-shadow: 0 0 15px rgba(30, 144, 255, 0.9);
+   }
+       #foto {
+        -webkit-touch-callout: none; /* Untuk perangkat iOS */
+        -webkit-user-select: none; /* Nonaktifkan pemilihan teks *//* Nonaktifkan pemilihan teks */
+        -ms-user-select: none; /* Nonaktifkan pemilihan teks */
+        -moz-user-select: none; /* Nonaktifkan pemilihan teks */
+        -webkit-user-drag: none; /* Nonaktifkan semua interaksi dengan gambar */
+    }
+
