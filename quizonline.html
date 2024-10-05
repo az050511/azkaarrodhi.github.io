@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Fullscreen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0px;
+            font-family: 'Roboto', sans-serif; /* Updated font */
+            background-color: #333;
+            color: #fff;
+            overflow-x: hidden;
+            position: auto;
+            max-height: 900px;
+        }
+    header {
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    background-color: #222;
+    color: white;
+    padding: 15px;
+    font-size: 27px;
+    font-weight: 700; /* Increased weight for header */
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 80px;
+    margin-left: 0px;
+    opacity: 0;
+    transform: translateY(-70px);
+    animation: fadeInDown 0.5s forwards;
+}
+
+#logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the logo and role text */
+    margin-right: 20px; /* Space between logo and name */
+}
+
+#logo-container img {
+    height: 90px;
+    width: auto;
+}
+
+#role-container {
+    font-size: 16px;
+    margin-top: -8px; /* Space between logo and role text */
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    margin-left: -14px;
+    color: #f99;
+    transform: translateY(0px);
+    animation: fadeInUp 0.5s forwards;
+    padding: 0px
+}
+    #role-container.developer {
+    color: gold; /* Warna emas untuk Developer */
+    font-size: 14px;
+}
+
+#role-container.peserta {
+    color: diamond; /* Warna abu-abu untuk Peserta */
+}
+#header-content {
+    display: flex;
+    align-items: center; /* Aligns header-name vertically */
+}
+
+#header-name {
+    font-size: 28px;
+    margin-left: -25px;
+    margin-top: 10px;
+}
+
+        /* Header */
+        header {
+            background-color: #222;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 26px;
+            font-weight: 700; /* Increased weight for header */
+            position: relative;
+            top: 0;
+            width: 110%;
+            z-index: 1000;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 80px;
+            margin-left: 0px;
+            opacity: 0;
+            transform: translateY(-70px);
+            animation: fadeInDown 0.5s forwards;
+        }
+
+        /* Logo on the left */
+        header img {
+            height: 80px;
+            width: auto;
+            margin-right: 15px;
+            margin-left: 0px;
+        }
+
+        #header-name {
+            margin-left: -25px;
+            font-size: 27px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #555;
+            font-size: 17px;
+            color: #fff;
+            padding: 20px 0px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 118%;
+            margin-top: -30px;
+            margin-left: -2px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 1s ease;
+        }
+
+        .footer-show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Main content */
+        #instructions {
+            margin: 100px auto 50px auto;
+            width: 402px;
+            height: 900px;
+            background-color: #444;
+            padding: 30px;
+            border-radius: 0px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            margin-top: 0px;
+            position: relative;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            padding: 30px;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 700; /* Increased weight for heading */
+            transform: translateY(40px);
+            animation: fadeInUp 1.6s forwards;
+        }
+
+        ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        li {
+            margin: 10px 0;
+            line-height: 1.6;
+            font-size: 18px;
+            color: #fff;
+            transform: translateY(70px);
+            animation: fadeInUp 2s forwards;
+            margin-left: -3px;
+        }
+
+        #quiz-button {
+            display: block;
+            margin: 30px auto;
+            padding: 15px 70px;
+            font-size: 25px;
+            cursor: pointer;
+            border-radius: 10px;
+            background-color: #333;
+            color: white;
+            font-weight: 700; /* Increased weight for button text */
+            border: 4px solid #1c86ee;
+            box-shadow: 0px 6px 14px rgba(71, 71, 255, 0.3);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 50px;
+            margin: center;
+        }
+
+        #quiz-button:hover {
+            background-color: #333;
+            box-shadow: 0px 8px 16px rgba(50, 50, 100, 0.5);
+        }
+
+        #quiz-section {
+            display: none;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        /* Custom prompt style */
+        #custom-prompt {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #777;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1001;
+        }
+
+        #custom-prompt input {
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            margin-top: 4px;
+            margin-left: 10px;
+        }
+
+        #custom-prompt button {
+            padding: 10px 107px;
+            font-size: 16px;
+            border: 2px solid #1c86ee;
+            border-radius: 4px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            margin-left: 0px;
+            margin-left: 10px;
+        }
+
+        #custom-prompt button:hover {
+            background-color: #155abf;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+    </style>
+    <script>
+        let quizStarted = false; // Variabel untuk melacak apakah kuis telah dimulai
+
+function enterFullscreen(element) {
+    if (element.requestFullscreen) {
+        element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+    }
+}
+
+function checkFullscreenChange() {
+    if (quizStarted && !document.fullscreenElement) {
+        clearContent();
+    }
+}
+
+function clearContent() {
+    document.body.innerHTML = '<p>All your answers have been removed for cheating. Please start from the beginning!</p>';
+}
+
+function showQuiz() {
+    quizStarted = true; // Set the quizStarted flag to true
+    document.getElementById('instructions').style.display = 'none';
+    document.getElementById('quiz-section').style.display = 'block';
+    enterFullscreen(document.getElementById('quiz-section'));
+}
+
+function showCustomPrompt() {
+    document.getElementById('custom-prompt').style.display = 'block';
+}
+
+function hideCustomPrompt() {
+    const name = document.getElementById('name-input').value;
+    const headerName = document.getElementById('header-name');
+    const roleContainer = document.getElementById('role-container'); // Kontainer untuk teks peran
+
+    // Set the name in the header
+    headerName.textContent = name;
+
+    // Tentukan peran berdasarkan nama input
+    let roleText = '';
+    let roleClass = '';
+    if (name.toLowerCase() === 'muhammad azka arrodhi') {
+        roleText = 'ADMIN';
+        roleClass = 'developer'; // Kelas untuk Developer
+    } else {
+        roleText = 'QUIZZER';
+        roleClass = 'peserta'; // Kelas untuk Peserta
+    }
+
+    // Set the role text and apply the class
+    roleContainer.textContent = roleText;
+    roleContainer.className = ''; // Reset any previous classes
+    roleContainer.classList.add(roleClass); // Add the appropriate class
+
+    // Terapkan animasi fadeIn
+    roleContainer.style.opacity = '0'; // Mulai dengan opacity 0
+    roleContainer.style.animation = 'fadeIn 1s forwards'; // Animasi fade-in
+
+    // Sembunyikan prompt setelah nama dikirim
+    document.getElementById('custom-prompt').style.display = 'none';
+}
+
+function handleVisibilityChange() {
+    if (quizStarted && document.hidden) {
+        clearContent();
+    }
+}
+
+function handleFocusChange() {
+    if (quizStarted && !document.hasFocus()) {
+        clearContent();
+    }
+}
+
+function handleBlurChange() {
+    if (quizStarted && !document.hasFocus()) {
+        // Tangani saat dokumen kehilangan fokus (misalnya, saat beralih ke tab lain)
+    }
+}
+
+window.addEventListener('visibilitychange', handleVisibilityChange);
+window.addEventListener('focus', handleFocusChange);
+window.addEventListener('blur', handleBlurChange);
+document.addEventListener('fullscreenchange', checkFullscreenChange);
+document.addEventListener('webkitfullscreenchange', checkFullscreenChange);
+document.addEventListener('mozfullscreenchange', checkFullscreenChange);
+document.addEventListener('MSFullscreenChange', checkFullscreenChange);
+
+window.onload = showCustomPrompt;
+    </script>
+</head>
+<body>
+    <header>
+    <div id="logo-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Imgdownloader.com-20240909003721701333.png" alt="Logo">
+        <div id="role-container" class="fadeIn"></div> <!-- Tempat untuk teks Developer atau Peserta -->
+    </div>
+    <div id="header-content">
+        <span id="header-name"></span>
+    </div>
+</header>
+
+    <div id="instructions">
+        <h2>Follow the Instructions Below to Take the Quiz!</h2>
+        <ul>
+            <li>If you are ready to take the quiz, please press the "Start Quiz" button below.</li>
+            <li>After pressing the "Start Quiz" button, the page will enter fullscreen mode.</li>
+            <li>If you attempt to exit fullscreen mode or leave the page, the content will be cleared.</li>
+            <li>When the page is cleared, all answers will be deleted, and the quiz will restart if refreshed.</li>
+            <li>Please answer the quiz honestly and read the questions carefully.</li>
+            <li>After finishing all the questions, click the "Submit" button.</li>
+            <li>Once you click submit, you can see your score, and the answers will be sent to the server.</li>
+        </ul>
+        <button id="quiz-button" onclick="showQuiz()">START QUIZ</button>
+    </div>
+
+    <section id="quiz-section">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdtOtd7SsgmPFYBGJ8VUKDkqt8E3MQ30gvn32QEbNOI5lP0-Q/viewform?embedded=true" 
+                width="100%" 
+                height="100%" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0">
+            Loading…
+        </iframe>
+    </section>
+
+    <!-- Custom prompt -->
+    <div id="custom-prompt">
+        <label for="name-input">Enter your name:</label>
+        <input type="text" id="name-input" placeholder="Enter your name">
+        <button onclick="hideCustomPrompt()">Submit</button>
+    </div>
+</body>
+</html>

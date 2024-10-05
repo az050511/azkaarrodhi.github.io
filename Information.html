@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #d1d1d1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            overflow: auto
+        }
+        .gform {
+            margin-left: 0px;
+            margin-top: auto;
+            border-radius: 10px;
+            position: relative;
+        }
+        .container {
+            margin-top: 20px;
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            max-width: 900px;
+            width: auto;
+            border: 1px solid #333;
+            position: relative;
+            overflow: auto;
+        }
+        .container::before {
+            content: "";
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            background: linear-gradient(45deg, rgba(0,0,0,0.1), rgba(0,0,0,0.4));
+            opacity: 0.3;
+            z-index: -1;
+        }
+        .h1l {
+            color: #e0e0e0;
+            border-bottom: 2px solid #6200ea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center
+            
+        }
+    .btnfeedback {
+        border: 2px solid #1c86ee;
+        background-color: #000;
+        margin-left: 50px;
+    }
+        .message {
+            background: #333;
+            position: relative;
+            border: 1px solid #444;
+            padding: 20px;
+            border-radius: 4px;
+            color: #c0c0c0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="h1l">Latest Updates</h1>
+        <ul>
+            <li>title: Scratch Project: Space Shooter</li>
+            <li>upload time: 25/09/2024</li>
+            <li>time ends: 20/10/2024</li>
+        </ul>
+        <div class="message" id="message">
+            <!-- Pesan terbaru akan ditampilkan di sini -->
+            <button class="btnfeedback" onclick="window.location.href='https://s.id/Sendmealetter';">send feedback</button>           
+        </div>
+    <script>
+       // Mendapatkan elemen dengan ID message
+const messageElement = document.getElementById('message');
+
+// Mendapatkan tanggal saat ini dalam UTC
+const today = new Date();
+const utcYear = today.getUTCFullYear();
+const utcMonth = today.getUTCMonth(); // 0-based index (0 = January)
+const utcDate = today.getUTCDate();
+
+// Membuat tanggal target di UTC (15 September 2024)
+const targetDate = new Date(Date.UTC(2024, 9, 20)); // Bulan 8 adalah September, karena indeks bulan dimulai dari 0
+
+// Memeriksa apakah tanggal saat ini adalah 15 September 2024 atau setelahnya
+const currentDate = new Date(Date.UTC(utcYear, utcMonth, utcDate));
+
+console.log('Current Date:', currentDate);
+console.log('Target Date:', targetDate);
+
+if (currentDate >= targetDate) {
+    messageElement.innerHTML = 'Information has ended, please wait for updates.';
+} else {
+    messageElement.innerHTML = `
+<div class="project-announcement">
+  <h2>Early Project: Space Shooter</h2>
+  <img src="https://lysander-frost.github.io/Foto/scratch.jpg" alt="Space Shooter Game Thumbnail" style="width:100%; height:auto; border-radius:10px; pointer-events: none;">
+  <p>I once created a simple Scratch project called <strong>Space Shooter</strong>. This is a simple game where you control a spaceship to avoid obstacles and shoot enemies. It's nothing too complicated or fancy, but it's a fun way to practice some basic game development skills.</p>
+  <p>Even though the game is simple, I want you to try it and let me know what you think. Feedback is always appreciated!</p>
+  <a href="https://scratch.mit.edu/projects/1026940287" class="explore-btn" style="display:inline-block; padding:12px 24px; background-color:#4CAF50; color:white; text-align:center; text-decoration:none; border-radius:5px; margin-top:10px;">Explore</a>
+</div>`;
+}
+    </script>
+</body>
+</html>
