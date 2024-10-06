@@ -202,6 +202,29 @@
   </footer> 
      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
    <script src="https://azkaarrodhi.github.io/script.js"></script>
+     <script>
+    // Fungsi untuk mendeteksi apakah perangkat menggunakan desktop berdasarkan user agent dan ukuran layar
+    function isDesktop() {
+        const userAgent = navigator.userAgent.toLowerCase();
+        const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/.test(userAgent);
+        
+        // Deteksi ukuran layar (contoh: lebar lebih dari 1024px dianggap desktop)
+        const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        
+        // Jika bukan perangkat mobile dan ukuran layar besar (desktop), return true
+        return !isMobile && screenWidth > 764;
+    }
+
+    // Blokir akses jika perangkat adalah desktop
+    if (isDesktop()) {
+    // Tampilkan pesan blokir
+    document.body.innerHTML = `
+<div style="margin-top: -100px; text-align: center; display: flex; justify-content: center; align-items: center; height: 105vh; width: 100vw; font-family: Arial, sans-serif; color: #ff6347; background-color: white; flex-direction: column;">
+  <h1 style="margin-top: -150px;">Mohon maaf, situs ini hanya dapat diakses melalui perangkat mobile.</h1>
+  <h4>Silakan kunjungi situs ini dari ponsel atau tablet Anda.</h4>
+</div>`;
+}
+</script>
    
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEHKYG2QKY"></script>
