@@ -5,7 +5,7 @@
     <meta property="og:description" content="Visit my site for a glimpse into my interests and activities.">
     <meta property="og:image" content="https://lysander-frost.github.io/file/forurl.jpg">
     <meta property="og:url" content="azkaarrodhi.github.io">
-  <meta name="keywords" content="Azka, Azka Arrodhi, Muhammad Azka Arrodhi, azka, muhammad azka arrodhi, azka arrodhi">
+  <meta name="keywords" content="Azka, Azka Arrodhi, Muhammad Azka Arrodhi, azka, muhammad azka arrodhi, azka arrodhi, website azka">
 <title>𝗔𝘇𝗸𝗮 𝗔𝗿𝗿𝗼𝗱𝗵𝗶</title>
 <link rel="icon" type="image/png" href="https://azkaarrodhi.github.io/20241005_205841_0000.png">
     <meta property="og:type" content="website">
@@ -22,6 +22,50 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://azkaarrodhi.github.io/style.css">
+  <style>
+        .form-container {
+            background-color:  #1e282f;
+            padding: 20px;
+            border-radius: 7px;
+            box-shadow: 0px 0px 15px #1c86ee;
+            width: 320px;
+            margin-bottom: 80px;
+            margin-top: 40px;
+            color: #ff;
+            margin-left: -5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 91%;
+            min-width: 91%;
+            max-width: 91%;
+            padding: 10px;
+            margin: 10px 0;
+            justify-content: center;
+            border-radius: 6px;
+            border: 0;
+            background-color: transparent;
+            color: white;
+            border-left: 3px solid #1c86ee;
+            border-top: 3px solid #1c86ee;
+           border-bottom: 5px solid #1c86ee;
+            border-right: 6px solid #1c86ee;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #1c86ee;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #888;
+        }
+  </style>
  </head> 
    <header>
   <div class="header-content">
@@ -193,12 +237,51 @@
             <a href="https://t.me/lysander_frost?text=Halo,%20Azka!%20Saya%20dari%20website%20Anda.%0A%0APesan:%20"><i class="fab fa-telegram"></i></a>
         </div>
         <p class="fade-in" style="margin-left: 35px; margin-top: 25px;"><span></span></p>
+       <div class="form-container fade-in">
+    <h2>Contact</h2>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" placeholder="Message...." name="message" rows="10" required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Mencegah submit form default
+
+        // Ambil nilai input form
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Format pesan yang akan dikirim ke WhatsApp
+        const whatsappMessage = `> ${email}\n\nHalo, Saya ${name}. ${message}`;
+
+        // Nomor WhatsApp tujuan (ubah dengan nomor Anda)
+        const phoneNumber = '6282142909096'; // nomor WhatsApp tujuan (tanpa tanda +)
+
+        // Buat URL WhatsApp
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+        // Redirect ke URL WhatsApp
+        window.open(whatsappURL, '_blank');
+    });
+</script>
+      
     </section>
   <footer> 
-     <div class="footer">
+     
      <p id="footer-text" class="fade-in">© 2024 by <span>Azka Arrodhi.</span> Thoughtfully made, respectfully <span>reserved</span>.
      </p>
-        </div>
+        
   </footer> 
      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
    <script src="https://azkaarrodhi.github.io/script.js"></script>
@@ -212,7 +295,7 @@
         const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         
         // Jika bukan perangkat mobile dan ukuran layar besar (desktop), return true
-        return !isMobile && screenWidth > 764;
+        return !isMobile && screenWidth > 704;
     }
 
     // Blokir akses jika perangkat adalah desktop
@@ -221,7 +304,7 @@
     document.body.innerHTML = `
 <div style="margin-top: -100px; text-align: center; display: flex; justify-content: center; align-items: center; height: 105vh; width: 100vw; font-family: Arial, sans-serif; color: #ff6347; background-color: white; flex-direction: column;">
   <h1 style="margin-top: -150px;">Mohon maaf, situs ini hanya dapat diakses melalui perangkat mobile.</h1>
-  <h4>Silakan kunjungi situs ini dari ponsel atau tablet Anda.</h4>
+  <h4>Silakan kunjungi situs ini dari ponsel Anda.</h4>
 </div>`;
 }
 </script>
