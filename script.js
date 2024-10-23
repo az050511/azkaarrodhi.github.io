@@ -42,6 +42,9 @@
                 const pauseIcon = playPauseBtn.querySelector('.pause-icon');
                 const progress = player.querySelector('.progress');
 
+                // Set volume penuh (100%)
+                audio.volume = 1.0;
+
                 // Memperbarui ikon saat metadata di-load
                 audio.addEventListener('loadedmetadata', () => {
                     this.updatePlayPauseButton(audio, playIcon, pauseIcon);
@@ -76,7 +79,6 @@
     // Inisialisasi audio player
     AudioPlayerNamespace.init();
 })();
-     
 
      
      window.onload = function() {
