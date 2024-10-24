@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
     const profileSection = document.getElementById('profile-pic');
-    const fadeInElements = document.querySelectorAll('.fade-in, .fade-in-side, .fade-in-up, .fade-in-down'); // Tambahkan fade-in-down
+    const fadeInElements = document.querySelectorAll('.fade-in, .fade-in-side, .fade-in-up, .fade-in-down .fade-in-diagonal, .fade-in-bottom, .fade-in-rotate, .fade-in-scale, .fade-in-shake, .fade-in-bounce, .fade-in-right, .fade-in-zoom, .fade-in-slide, .fade-in-color'); // Tambahkan fade-in-down
     let profileSeen = false; // Flag untuk menandai apakah profil sudah terlihat
     let topReached = false;  // Flag untuk menandai jika scroll sudah sampai ke atas
     
